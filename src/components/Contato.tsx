@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa6'
+import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa6'
 import { perfil, redes } from '../data/perfil'
 import './Contato.css'
 
@@ -15,7 +15,7 @@ export default function Contato() {
         <ul className="contato__redes">
           <li><a href={redes.linkedin} target="_blank" rel="noreferrer"><FaLinkedin aria-hidden="true" /> LinkedIn</a></li>
           <li><a href={redes.github} target="_blank" rel="noreferrer"><FaGithub aria-hidden="true" /> GitHub</a></li>
-          <li><a href={redes.instagram} target="_blank" rel="noreferrer"><FaInstagram aria-hidden="true" /> Instagram</a></li>
+          <li><a href={redes.whatsapp} target="_blank" rel="noreferrer"><FaWhatsapp aria-hidden="true" /> WhatsApp</a></li>
         </ul>
         <p className="contato__copy">© {new Date().getFullYear()} {perfil.nome}</p>
       </div>

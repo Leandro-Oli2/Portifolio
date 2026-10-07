@@ -31,7 +31,7 @@ export const perfil = {
 export const redes = {
   github: 'https://github.com/Leandro-Oli2',
   linkedin: 'https://www.linkedin.com/in/leandro-oliveira29/',
-  instagram: 'https://www.instagram.com/leandro_oli29/',
+  whatsapp: 'https://wa.me/5567992253681?text=Ol%C3%A1%2C%20Leandro!%20Vi%20seu%20portf%C3%B3lio.',
 }
 
 export type Etapa = {

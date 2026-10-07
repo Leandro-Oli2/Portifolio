@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa6'
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa6'
 import { perfil, redes } from '../data/perfil'
 import './Navbar.css'
 
@@ -43,7 +43,7 @@ export default function Navbar({ onAbrirPerfil }: Props) {
       <div className="navbar__redes">
         <a href={redes.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
         <a href={redes.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-        <a href={redes.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
+        <a href={redes.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
       </div>
 
       <button
