@@ -1,0 +1,72 @@
+.projetos__lista { display: grid; gap: 1.25rem; }
+
+.projeto {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--orbita-borda);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(13, 17, 48, 0.75), rgba(4, 5, 14, 0.6));
+}
+
+/* Cada projeto vira um planeta com as cores dele */
+.projeto__planeta { position: relative; aspect-ratio: 1; display: grid; place-items: center; }
+.projeto__esfera {
+  width: 62%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, var(--c1), var(--c2) 70%, #000 100%);
+  box-shadow: 0 0 60px -10px var(--c1);
+}
+.projeto__anel {
+  position: absolute; width: 96%; height: 30%;
+  border: 2px solid var(--c1); border-radius: 50%;
+  opacity: 0.5; transform: rotate(-18deg);
+}
+.projeto__imagem { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; }
+
+.projeto__contexto {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+  color: var(--acrecao); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.35rem;
+}
+.projeto__status {
+  color: var(--poeira); font-weight: 500;
+  padding: 0.1rem 0.6rem; border: 1px solid var(--orbita-borda); border-radius: 999px;
+}
+.projeto h3 { font-family: var(--fonte-display); font-weight: 600; font-size: clamp(1.3rem, 2.5vw, 1.7rem); letter-spacing: -0.02em; }
+.projeto__descricao { color: var(--poeira); margin: 0.5rem 0 0.9rem; max-width: 62ch; }
+
+.projeto__destaques { margin-bottom: 1rem; display: grid; gap: 0.35rem; }
+.projeto__destaques li { position: relative; padding-left: 1.2rem; font-size: 0.95rem; max-width: 64ch; }
+.projeto__destaques li::before {
+  content: ''; position: absolute; left: 0; top: 0.65em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--nebulosa);
+}
+
+.projeto__stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.projeto__stack li {
+  font-size: 0.82rem; padding: 0.25rem 0.7rem; border-radius: 6px;
+  background: rgba(140, 123, 255, 0.12); color: #c9c1ff;
+}
+
+.projeto__link {
+  display: inline-block; margin-top: 1.1rem; font-weight: 600;
+  color: var(--acrecao); text-underline-offset: 4px;
+}
+
+.projetos__grupo { margin-top: 2.5rem; }
+.projetos__grupo + .projetos__grupo { margin-top: 4.5rem; }
+.projetos__subtitulo {
+  font-family: var(--fonte-display); font-weight: 600; font-size: 1.3rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.projetos__subtitulo::after { content: ''; flex: 1; height: 1px; background: var(--orbita-borda); }
+.projetos__descricao-grupo { color: var(--poeira); margin: 0.4rem 0 1.5rem; max-width: 60ch; }
+.projetos__pessoais { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.projetos__pessoais .projeto { grid-template-columns: 1fr; align-items: start; }
+
+@media (max-width: 760px) {
+  .projeto { grid-template-columns: 1fr; }
+  .projeto__planeta { width: 140px; }
+  .projetos__pessoais { grid-template-columns: 1fr; }
+}

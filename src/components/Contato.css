@@ -1,0 +1,27 @@
+.contato {
+  position: relative; overflow: hidden;
+  padding: clamp(5rem, 12vw, 9rem) 1.5rem 2.5rem;
+  text-align: center;
+  border-top: 1px solid var(--orbita-borda);
+}
+.contato__planeta {
+  position: absolute; left: 50%; bottom: -55%; transform: translateX(-50%);
+  width: min(900px, 140vw); opacity: 0.35; pointer-events: none; z-index: -1;
+}
+.contato__conteudo { max-width: 40rem; margin: 0 auto; }
+.contato h2 {
+  font-family: var(--fonte-display); font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -0.03em; line-height: 1.05;
+}
+.contato__conteudo > p:not(.contato__copy) { color: var(--poeira); margin: 1rem auto 2rem; max-width: 44ch; }
+.contato__redes { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.contato__redes a {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.25rem; border-radius: 999px;
+  border: 1px solid var(--orbita-borda); background: rgba(13, 17, 48, 0.7);
+  text-decoration: none; font-weight: 600; transition: border-color 0.2s, color 0.2s;
+}
+.contato__redes a:hover { border-color: var(--acrecao); color: var(--acrecao); }
+.contato__copy { margin-top: 4.5rem; color: var(--poeira); font-size: 0.85rem; }
+
+.contato__email { margin-bottom: 1rem; max-width: 100%; overflow-wrap: anywhere; }

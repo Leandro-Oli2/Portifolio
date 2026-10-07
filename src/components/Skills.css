@@ -1,0 +1,33 @@
+.skills__faixas {
+  display: grid; gap: 1rem;
+  margin-inline: calc(50% - 50vw);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.skills__faixa { overflow: hidden; }
+.skills__trilho {
+  display: flex; gap: 1rem; width: max-content;
+  animation: rolar 45s linear infinite;
+}
+.skills__faixa.reversa .skills__trilho { animation-direction: reverse; animation-duration: 55s; }
+.skills__faixa:hover .skills__trilho { animation-play-state: paused; }
+
+.skills__trilho li {
+  display: flex; align-items: center; gap: 0.7rem;
+  padding: 0.85rem 1.3rem;
+  border: 1px solid var(--orbita-borda);
+  border-radius: 999px;
+  background: rgba(13, 17, 48, 0.55);
+  white-space: nowrap; font-weight: 500;
+}
+.skills__trilho svg { font-size: 1.4rem; color: var(--acrecao); }
+.skills__faixa.reversa svg { color: var(--nebulosa); }
+
+@keyframes rolar { to { transform: translateX(calc(-50% - 0.5rem)); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__faixas { -webkit-mask-image: none; mask-image: none; margin-inline: 0; }
+  .skills__faixa.reversa { display: none; }
+  .skills__trilho { flex-wrap: wrap; width: auto; animation: none; }
+  .skills__trilho li[aria-hidden='true'] { display: none; }
+}

@@ -1,0 +1,27 @@
+.perfil-modal {
+  margin: auto; border: none; background: transparent; color: var(--estelar);
+  max-width: min(420px, calc(100vw - 2rem)); width: 100%;
+}
+.perfil-modal::backdrop { background: rgba(4, 5, 14, 0.75); backdrop-filter: blur(6px); }
+.perfil-modal[open] { animation: abrir 0.3s cubic-bezier(0.2, 0.7, 0.1, 1); }
+@keyframes abrir { from { opacity: 0; transform: scale(0.95) translateY(10px); } }
+
+.perfil-modal__conteudo {
+  position: relative; padding: 2rem; text-align: center;
+  border: 1px solid var(--orbita-borda); border-radius: 28px;
+  background: linear-gradient(160deg, var(--orbita), var(--vazio));
+}
+.perfil-modal__conteudo img {
+  width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.25rem;
+  box-shadow: 0 0 0 4px var(--vazio), 0 0 0 5px var(--acrecao), 0 0 50px rgba(255, 178, 101, 0.35);
+}
+.perfil-modal h2 { font-family: var(--fonte-display); font-weight: 600; font-size: 1.4rem; }
+.perfil-modal__cargo { color: var(--acrecao); margin-bottom: 1.5rem; }
+.perfil-modal dl { text-align: left; display: grid; gap: 0.9rem; border-top: 1px solid var(--orbita-borda); padding-top: 1.25rem; }
+.perfil-modal dt { color: var(--poeira); font-size: 0.85rem; }
+.perfil-modal__fechar {
+  position: absolute; top: 0.75rem; right: 0.75rem;
+  width: 40px; height: 40px; border-radius: 50%; font-size: 1.6rem; line-height: 1;
+  color: var(--poeira);
+}
+.perfil-modal__fechar:hover { color: var(--estelar); background: rgba(236, 233, 255, 0.08); }

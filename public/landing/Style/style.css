@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('cardapio.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('depoimentos.css');
+@import url('carrossel.css');
+
+:root{
+    --color-primary-1: #fff9ea;
+    --color-primary-2: #ffe8b4;
+    --color-primary-3: #f8d477;
+    --color-primary-4: #ffe100;
+    --color-primary-5: #ffcb45;
+    --color-primary-6: #e9a209;
+
+    --color-neutra-1: #1d1d1d;
+    --color-neutra-2: #fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.btn-default{
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary-5);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+    transition: background-color .3s ease;
+}
+.btn-default:hover{
+    background-color: var(--color-primary-3);
+}
+.social-media-buttons{
+    display: flex;
+    gap: 18px;
+}
+.social-media-buttons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 45px;
+    background-color: var(--color-neutra-2);
+    text-decoration: none;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: var(--color-neutra-1);
+    transition: box-shadow .3s ease;
+}
+.social-media-buttons a:hover{
+    box-shadow: 0px 0px 12px 4px #f8d477;
+}
+.section-title{
+    color: var(--color-primary-6);
+    font-size: 2rem;
+    text-align: center;
+}
+.section-subtitle{
+    font-size: 2.1875rem;
+    text-align: center;
+}
+

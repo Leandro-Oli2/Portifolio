@@ -1,0 +1,80 @@
+:root {
+  /* Paleta: o fundo é o vazio, o acento é o disco de acreção do buraco negro */
+  --vazio: #04050e;
+  --orbita: #0d1130;
+  --orbita-borda: rgba(236, 233, 255, 0.1);
+  --estelar: #ece9ff;
+  --poeira: #a3a0c2;
+  --acrecao: #ffb265;
+  --nebulosa: #8c7bff;
+
+  --fonte-display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --fonte-texto: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --largura: 1120px;
+  --navbar: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--navbar); }
+
+body {
+  background: var(--vazio);
+  color: var(--estelar);
+  font-family: var(--fonte-texto);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+ul, ol { list-style: none; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+
+:focus-visible { outline: 2px solid var(--acrecao); outline-offset: 3px; border-radius: 4px; }
+
+.starfield { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+
+main, footer { position: relative; }
+
+.secao {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: clamp(4rem, 10vw, 7.5rem) 1.5rem;
+}
+
+.secao__titulo {
+  font-family: var(--fonte-display);
+  font-weight: 600;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.secao__intro { color: var(--poeira); max-width: 60ch; margin-bottom: 3rem; }
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--orbita-borda);
+  background: rgba(13, 17, 48, 0.6);
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  font-weight: 600;
+  transition: border-color 0.2s, background 0.2s;
+}
+.botao:hover { border-color: var(--acrecao); }
+.botao--primario { background: var(--acrecao); color: var(--vazio); border-color: var(--acrecao); }
+.botao--primario:hover { background: #ffc58a; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
