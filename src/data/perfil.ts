@@ -11,8 +11,7 @@ import { TbBrandCSharp } from 'react-icons/tb'
 import { DiMsqlServer } from 'react-icons/di'
 
 export const perfil = {
-  nome: 'Leandro Candido',
-  apelido: 'Léo',
+  nome: 'Leandro Oliveira',
   cargo: 'Desenvolvedor de software',
   empresa: 'Tahto',
   local: 'Campo Grande, MS',

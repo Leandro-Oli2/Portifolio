@@ -25,7 +25,7 @@ export default function Hero() {
         </p>
         <h1 id="hero-titulo" className="hero__nome">
           <span>Leandro</span>
-          <span>Candido</span>
+          <span>Oliveira</span>
         </h1>
         <p className="hero__resumo">{perfil.resumo}</p>
         <div className="hero__acoes">
