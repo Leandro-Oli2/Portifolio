@@ -68,6 +68,7 @@
     opacity: 0; visibility: hidden; transform: translateY(-8px);
     transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
   }
+  .navbar nav { position: static; transform: none; }
   .navbar__links.aberto { opacity: 1; visibility: visible; transform: none; }
   .navbar__links a { padding: 0.85rem 1rem; font-size: 1.05rem; }
 }
